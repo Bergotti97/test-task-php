@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, inital-scale = 1.0">
+    <meta http-equiv ="X-UA-Compatable" content = "ie = edge">
+    <title> Форма заказа </title>
+    <link rel ="stylesheet" href = "css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+    <h1<>Форма заказа</h1>
+    <form id ="form">
+        <input type="text" id="name" name="name" placeholder="ФИО" class="form-control"><br>
+        <input type="email" id="email" name="email" placeholder="Email" class="form-control"><br>
+        <input type="phone" id="phone" name="phone" placeholder="Телефон" class="form-control"><br>
+        <select id="tariff" name="tariff" placeholder="Тариф" class="form-control">
+            <option value="">Выберите тариф</option>  
+            <option value="1">Тариф №1</option>  
+            <option value="2">Тариф №2</option>  
+            <option value="3">Тариф №3</option> 
+            <option value="4">Тариф №4</option>  
+        </select><br>
+        <input type="text" id="adress" name="adress" placeholder="Адрес доставки" class="form-control"><br>    
+        <input type="date" id="data" name="data" placeholder="Дата доставки" class="form-control"><br>
+        <button type="button" id="sendData" class="btn btn-success" name="botton">Отправить</button>  
+    </form>
+    <div id="errorMess"></div> 
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/formDataBase.js"></script>
+</html>

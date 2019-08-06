@@ -1,0 +1,15 @@
+1.SELECT customer.id count(triff.price) count(triff.price>1000) FROM customer 
+JOIN customer_orders ON customer_orders.customer_phone=customer.phone 
+JOIN tariff ON customer_orders.tariff=tariff.id where triff.price<1000
+UNION
+SELECT count(triff.price) count(triff.price<1000) FROM customer 
+JOIN customer_orders ON customer_orders.customer_phone=customer.phone 
+JOIN tariff ON customer_orders.tariff=tariff.id where triff.price>1000;
+
+2.SELECT customer_orders.id customer.id triff.price count(triff.price>1000) FROM customer 
+JOIN customer_orders ON customer_orders.customer_phone=customer.phone 
+JOIN tariff ON customer_orders.tariff=tariff.id HAVING(COUNT(customer_orders.id=3));
+
+3.SELECT customer.id count(triff.price) count(triff.price>1000) FROM customer 
+JOIN customer_orders ON customer_orders.customer_phone=customer.phone 
+JOIN tariff ON customer_orders.tariff=tariff.id where triff.price<1000 AND HAVING(COUNT(customer_orders.id=3));
